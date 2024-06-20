@@ -33,7 +33,7 @@
       - numpy를 import하여 작업할 matrix에 대한 내장함수를 이용합니다
       - 함수는 총 두 개가 있습니다. 하나는 matrix의 input을 받아올 get_matrix_input(n)과 메인 함수가 있습니다.
       - 역행렬이 존재하기 위해선 우선, square matrix여야 하므로, input으로는 n(int) 하나를 입력 받습니다. 이후, get_matrix_input(n) 함수를 통해서 n을 입력받고 nxn 행렬의 원소를 각각 space를 기준으로 입력하면 행렬이 준비됩니다.
-      - main()함수는 Error에 관련된 수업을 듣고, 수정을 하여 훨씬 간단하게 구현해보았습니다. 메인 함수의 동작을 설명하겠습니다. 우선, nxn 행렬에서 n이 될 자연수 하나를 입력받습니다. 이때 파이썬은 conversion을 int(input(...)) 형식으로 n의 타입을 바로 int로 convert할 수 있음을 이용했습니다. 이후 get_matrix_input(n) 함수를 호출하여 nxn 행렬을 작성하고 역행렬을 만들 준비를 끝냈습니다.
+      - main()함수는 Error에 관련된 수업을 듣고, 수정을 하여 훨씬 간단하게 구현해보았습니다. 메인 함수의 동작을 설명하겠습니다. 우선, nxn 행렬에서 n이 될 자연수 하나를 입력받습니다. 이때 파이썬은 conversion을 int(input(...)) 형식으로 n을 바로 int로 convert할 수 있음을 이용했습니다. 이후 get_matrix_input(n) 함수를 호출하여 nxn 행렬을 작성하고 역행렬을 만들 준비를 끝냈습니다.
       - try, except 코드는 우선, numpy의 내장된 함수를 활용하여 nxn 행렬의 역행렬을 구해봅니다. 이때, 역행렬이 구해졌으면, print("1. The inverse matrix exists.")부터 코드가 실행되며 역행렬을 출력합니다. 만약, 역행렬이 존재하지 않는 행렬을 입력했다면, np.linalg.LinAlgError가 발생해서, except구문의 print("1. The inverse matrix does not exist.")를 실행하고 종료합니다.
 
         
