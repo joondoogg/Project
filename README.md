@@ -38,7 +38,9 @@
         
   3) 다음은 모델의 input과 output이 어떻게 입력되고 출력되는지 구체적인 결과값입니다. Colab에서 실행하였습니다.
 <img width="386" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/d2459a7a-e13b-4f45-8e4a-5a17d181b936">
+
 <img width="386" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/d3eaacba-7774-44ca-9dad-b9469b53968d">
+
 <img width="460" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/3c0ddacd-ee28-43a8-9fc3-479654668287">
 역행렬의 결과가(존재한다면) 정확하게 구해짐을 확인할 수 있습니다.
 
@@ -85,8 +87,8 @@
      
    3) 다음은 모델의 input과 output이 어떻게 입력되고 출력되는지 구체적인 결과값입니다. Colab에서 실행하였습니다.
 <img width="386" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/5cefb801-b0dc-4d89-accb-5d86dc1195c3">
-<img width="591" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/2813b148-0ba1-4f01-ba91-d96329b8a967">
-<img width="575" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/0cf6dd75-c136-466a-b5fd-22b2b9924b4a">
+<img width="386" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/2813b148-0ba1-4f01-ba91-d96329b8a967">
+<img width="386" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/0cf6dd75-c136-466a-b5fd-22b2b9924b4a">
 높이 3, 5, 7의 파스칼 삼각형을 출력하였습니다.
 
       
