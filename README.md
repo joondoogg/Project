@@ -36,12 +36,60 @@
       - try, except 코드는 우선, numpy의 내장된 함수를 활용하여 nxn 행렬의 역행렬을 구해봅니다. 이때, 역행렬이 구해졌으면, print("1. The inverse matrix exists.")부터 코드가 실행되며 역행렬을 출력합니다. 만약, 역행렬이 존재하지 않는 행렬을 입력했다면, np.linalg.LinAlgError가 발생해서, except구문의 print("1. The inverse matrix does not exist.")를 실행하고 종료합니다.
 
         
-  3) 다음은 모델의 input과 output이 어떻게 입력되고 출력되는지 구체적인 결과값입니다.
+  3) 다음은 모델의 input과 output이 어떻게 입력되고 출력되는지 구체적인 결과값입니다. Colab에서 실행하였습니다.
 <img width="386" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/d2459a7a-e13b-4f45-8e4a-5a17d181b936">
+<img width="386" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/d3eaacba-7774-44ca-9dad-b9469b53968d">
 <img width="460" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/3c0ddacd-ee28-43a8-9fc3-479654668287">
+역행렬의 결과가(존재한다면) 정확하게 구해짐을 확인할 수 있습니다.
 
 
+2. 제 두 번째 프로젝트는 파스칼 삼각형을 출력하는 프로그램입니다.
+   1) 만들게 된 동기 : 이산수학, 조합론 등 파스칼 삼각형은 조합(combination)에 대한 중요한 정보를 알려주며 제 개인적으로 가장 아름다운 삼각형이라고 생각합니다. 1번 프로젝트에서는 프롬트에 결괏값을 출력했다면, matplotlib의 내장함수를 활용해서 이번에는 그림을 그려주는 프로그램을 짜보는 게 어떨까 해서, 그저 아무 데이터를 보여주는 것보다, 의미 있는 데이터를 출력해보고자 파스칼 삼각형을 생각하게 되었습니다. 이 프로젝트는 matplotlib에 대한 이해도를 매우 높여줬으며 코드만으로 그림까지 출력함으로써, 프로그래밍만으로 데이터의 가시화를 해볼 수 있는 경험이었습니다.
+   2) 다음은 파스칼삼각형 코드입니다. (따로 첨부되어 있습니다)
 
+                  import matplotlib.pyplot as plt
+                  
+                  def generate_pascals_triangle(height):
+                      triangle = []
+                      for i in range(height):
+                          row = [1] * (i + 1)
+                          for j in range(1, i):
+                              row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+                          triangle.append(row)
+                      return triangle
+                  
+                  def plot_pascals_triangle(triangle):
+                      fig, ax = plt.subplots(figsize=(1, 1))  # 그림 크기를 5x5 인치로 설정
+                      ax.axis('off')
+                      
+                      for i, row in enumerate(triangle):
+                          for j, num in enumerate(row):
+                              ax.text(j - i / 2, -i, str(num), ha='center', va='center', fontsize=20)  # 글자 크기를 크게 설정
+                      
+                      plt.gca().invert_yaxis()
+                      plt.show()
+                  
+                  def main():
+                      height = int(input("Enter the height of Pascal's triangle: "))
+                      triangle = generate_pascals_triangle(height)
+                      plot_pascals_triangle(triangle)
+                  
+                  if __name__ == "__main__":
+                      main()
+      - 그래프, 등 데이터를 도식화하는 데에 많이 쓰이는 matplotlib의 pyplot을 사용하였습니다.
+      - 함수는 총 3개로, generate_pascals_triangle(height), plot_pascals_triangle(triangle), 메인 함수가 있습니다.
+      - generate_pascals_triangle(height)는 height을 input으로 받아, 배열 구조를 활용하여 파스칼 삼각형을 생성합니다.
+      - plot_pascals_triangle(triangle)은 위 함수로 만들어진 파스칼 삼각형을 도식화하는 함수입니다.
+      - 그림 크기와 글자 크기의 설정에 있어 colab에 실행했을 때, 최적의 그림을 얻을만한 size들로 설정을 해놨습니다. 이때 for문에서 enumerate를 사용하였습니다. 이는 각 루프마다 인덱스와 요소를 반환하여 코드를 간결하게 할 수 있었습니다. ax.text는 도식화할 때 축에 텍스트를 추가하는데 활용이 되어 유용하게 활용했습니다.
+      - 메인함수의 실행 : 파스칼 삼각형의 높이를 input으로 받습니다. 이후 파스칼 삼각형을 만들어 내고, 마지막으로 그림으로 도식화합니다.
+     
+   3) 다음은 모델의 input과 output이 어떻게 입력되고 출력되는지 구체적인 결과값입니다. Colab에서 실행하였습니다.
+<img width="386" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/5cefb801-b0dc-4d89-accb-5d86dc1195c3">
+<img width="591" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/2813b148-0ba1-4f01-ba91-d96329b8a967">
+<img width="575" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/0cf6dd75-c136-466a-b5fd-22b2b9924b4a">
+높이 3, 5, 7의 파스칼 삼각형을 출력하였습니다.
+
+      
 
 
 
