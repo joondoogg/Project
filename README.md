@@ -257,7 +257,7 @@ input으로 4x4행렬을 주었으며 역행렬이 존재합니다
                       '고속터미널': [('3호선', '9호선', random.randint(2, 6))],
                       '선정릉' : [('9호선', '수인분당선', random.randint(2, 6))],
                       '종합운동장' : [('9호선', '2호선', random.randint(2, 6))],
-                      
+                      '교대' : [('3호선', '2호선', random.randint(2, 6))]
                   }
                   
                   # 그래프 생성
@@ -352,3 +352,14 @@ input으로 4x4행렬을 주었으며 역행렬이 존재합니다
       - 마지막으로, 잘못된 역을 입력하였을 경우, 에러메세지와 함께 종료됩니다.
 
    3) 다음은 모델의 input과 output이 어떻게 입력되고 출력되는지 구체적인 결과값입니다. Colab에서 실행하였습니다.
+<div style="display: flex; flex-wrap: nowrap; gap: 10px; align-items: flex-start;">
+  <img width="512" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/32392e60-2329-4e67-951c-242fb6f8dcd1">
+  <img width="471" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/9be364ed-0967-4b2b-9cda-1c84000f1d38">
+  <img width="613" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/82cf5084-d20c-4216-8a42-4d47563ebc75">
+  <img width="199" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/10b4d9d2-a741-4f6c-a61f-6ab0b51bc97a">
+  <img width="468" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/515c2397-92c6-483f-8185-e312be527735">
+  <img width="428" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/9cfeb35f-d5fc-4966-ac25-da515ef731fb">
+  <img width="472" alt="image" src="https://github.com/joondoogg/Project/assets/146046027/3cde3d4c-ea68-4bef-aae6-3afd6d2adb32">
+
+</div>
+
